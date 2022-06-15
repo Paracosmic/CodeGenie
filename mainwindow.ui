@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1135</width>
+    <height>815</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dynamic PHP Code Generator</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QLabel" name="htmlStatusLabel">
+      <property name="text">
+       <string>HTML: &lt;span style=&quot;color:red;&quot;&gt;not parsed&lt;/span&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QTabWidget" name="tabWidget_2">
+      <property name="currentIndex">
+       <number>4</number>
+      </property>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>HTML</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QPlainTextEdit" name="htmlTextEdit"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_7">
+       <attribute name="title">
+        <string>Class</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QPlainTextEdit" name="classTextEdit"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>Generated</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QPlainTextEdit" name="generatedTextEdit"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_8">
+       <attribute name="title">
+        <string>CSS</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QPlainTextEdit" name="CSSTextEdit"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <attribute name="title">
+        <string>Tree View</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="1">
+         <widget class="HTMLTreeView" name="treeWidget" native="true"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="phpStatusLabel">
+      <property name="text">
+       <string>PHP: &lt;span style=&quot;color:red;&quot;&gt;not generated&lt;/span&gt;</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1135</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionSave_all"/>
+    <addaction name="actionSave_HTML"/>
+    <addaction name="actionSave_PHP"/>
+    <addaction name="actionSave_CSS"/>
+    <addaction name="actionSet_Working_Directory"/>
+    <addaction name="actionOpen_Existing_Class"/>
+    <addaction name="actionFile_Settings"/>
+   </widget>
+   <widget class="QMenu" name="menuParse">
+    <property name="title">
+     <string>Parse</string>
+    </property>
+    <addaction name="actionParse_HTML"/>
+    <addaction name="actionParser_Settings"/>
+   </widget>
+   <widget class="QMenu" name="menuGenerator">
+    <property name="title">
+     <string>Generator</string>
+    </property>
+    <addaction name="actionGenerate_PHP"/>
+    <addaction name="actionGenerate_HTML"/>
+   </widget>
+   <widget class="QMenu" name="menuWIndow">
+    <property name="title">
+     <string>Window</string>
+    </property>
+    <addaction name="actionOpen_HTML_in_New_Window"/>
+    <addaction name="actionOpen_CSS_in_New_Window"/>
+    <addaction name="actionOpen_Class_in_New_Window"/>
+    <addaction name="actionOpen_Tree_View_in_New_Window"/>
+    <addaction name="actionOpen_Generated_in_New_Window"/>
+   </widget>
+   <widget class="QMenu" name="menuTree_View">
+    <property name="title">
+     <string>Tree View</string>
+    </property>
+    <addaction name="actionGenerate_Tree"/>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="actionOpen_Settings"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuParse"/>
+   <addaction name="menuGenerator"/>
+   <addaction name="menuWIndow"/>
+   <addaction name="menuTree_View"/>
+   <addaction name="menuSettings"/>
+  </widget>
+  <action name="actionSave_all">
+   <property name="text">
+    <string>Save all</string>
+   </property>
+  </action>
+  <action name="actionParse_HTML">
+   <property name="text">
+    <string>Parse HTML</string>
+   </property>
+  </action>
+  <action name="actionParser_Settings">
+   <property name="text">
+    <string>Parser Settings</string>
+   </property>
+  </action>
+  <action name="actionGenerate_PHP">
+   <property name="text">
+    <string>Generate PHP</string>
+   </property>
+  </action>
+  <action name="actionGenerate_HTML">
+   <property name="text">
+    <string>Generate HTML</string>
+   </property>
+  </action>
+  <action name="actionGenerator_Settings">
+   <property name="text">
+    <string>Generator Settings</string>
+   </property>
+  </action>
+  <action name="actionSave_HTML">
+   <property name="text">
+    <string>Save HTML</string>
+   </property>
+  </action>
+  <action name="actionSave_PHP">
+   <property name="text">
+    <string>Save PHP</string>
+   </property>
+  </action>
+  <action name="actionSave_CSS">
+   <property name="text">
+    <string>Save CSS</string>
+   </property>
+  </action>
+  <action name="actionSet_Working_Directory">
+   <property name="text">
+    <string>Set Working Directory</string>
+   </property>
+  </action>
+  <action name="actionOpen_Existing_Class">
+   <property name="text">
+    <string>Open Existing Class</string>
+   </property>
+  </action>
+  <action name="actionOpen_HTML_in_New_Window">
+   <property name="text">
+    <string>Open HTML in New Window</string>
+   </property>
+  </action>
+  <action name="actionOpen_CSS_in_New_Window">
+   <property name="text">
+    <string>Open CSS in New Window</string>
+   </property>
+  </action>
+  <action name="actionOpen_Class_in_New_Window">
+   <property name="text">
+    <string>Open Class in New Window</string>
+   </property>
+  </action>
+  <action name="actionOpen_Tree_View_in_New_Window">
+   <property name="text">
+    <string>Open Tree View in New Window</string>
+   </property>
+  </action>
+  <action name="actionGenerate_Tree">
+   <property name="text">
+    <string>Generate Tree</string>
+   </property>
+  </action>
+  <action name="actionRegenerate_HTML">
+   <property name="text">
+    <string>Regenerate HTML</string>
+   </property>
+  </action>
+  <action name="actionRegenerate_PHP">
+   <property name="text">
+    <string>Regenerate PHP</string>
+   </property>
+  </action>
+  <action name="actionOpen_Generated_in_New_Window">
+   <property name="text">
+    <string>Open Generated in New Window</string>
+   </property>
+  </action>
+  <action name="actionFile_Settings">
+   <property name="text">
+    <string>File Settings</string>
+   </property>
+  </action>
+  <action name="actionOpen_Settings">
+   <property name="text">
+    <string>Open Settings</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>HTMLTreeView</class>
+   <extends>QWidget</extends>
+   <header location="global">htmltreeview.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

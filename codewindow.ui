@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CodeWindow</class>
+ <widget class="QMainWindow" name="CodeWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout"/>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuParser">
+    <property name="title">
+     <string>Parser</string>
+    </property>
+    <addaction name="actionParse_HTML"/>
+    <addaction name="actionParser_Settings"/>
+   </widget>
+   <widget class="QMenu" name="menuGenerator">
+    <property name="title">
+     <string>Generator</string>
+    </property>
+    <addaction name="actionGenerate_PHP"/>
+    <addaction name="actionGenerate_HTML"/>
+    <addaction name="actionGenerator_Settings"/>
+   </widget>
+   <addaction name="menuParser"/>
+   <addaction name="menuGenerator"/>
+  </widget>
+  <action name="actionParse_HTML">
+   <property name="text">
+    <string>Parse HTML</string>
+   </property>
+  </action>
+  <action name="actionParser_Settings">
+   <property name="text">
+    <string>Parser Settings</string>
+   </property>
+  </action>
+  <action name="actionGenerate_PHP">
+   <property name="text">
+    <string>Generate PHP</string>
+   </property>
+  </action>
+  <action name="actionGenerate_HTML">
+   <property name="text">
+    <string>Generate HTML</string>
+   </property>
+  </action>
+  <action name="actionGenerator_Settings">
+   <property name="text">
+    <string>Generator Settings</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

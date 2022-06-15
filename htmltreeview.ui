@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HTMLTreeView</class>
+ <widget class="QWidget" name="HTMLTreeView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>991</width>
+    <height>485</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLineEdit" name="treeColumnExpr">
+     <property name="placeholderText">
+      <string>Column expression. Default: '%id%%content%%class%%type%%action%%method%%value%%href%'</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QCheckBox" name="liveEditCheckBox">
+     <property name="text">
+      <string>Live Edit</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QTreeWidget" name="treeWidget">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTreeView::branch:has-siblings:!adjoins-item {
+    border-image: url(C:/Users/Owner/Documents/DynamicPHP/image/vline.png) 0;
+}
+
+QTreeView::branch:has-siblings:adjoins-item {
+    border-image: url(C:/Users/Owner/Documents/DynamicPHP/image/branch-more.png) 0;
+}
+
+QTreeView::branch:!has-children:!has-siblings:adjoins-item {
+    border-image: url(C:/Users/Owner/Documents/DynamicPHP/image/branch-end.png) 0;
+}
+
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings {
+        border-image: none;
+        image: url(C:/Users/Owner/Documents/DynamicPHP/image/branch-closed.png);
+}
+
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings  {
+        border-image: none;
+        image: url(C:/Users/Owner/Documents/DynamicPHP/image/branch-open.png);
+}</string>
+     </property>
+     <column>
+      <property name="text">
+       <string comment="vbb">Element</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Attributes</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Content</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
